@@ -1,0 +1,221 @@
+my_list=[1,2,3,4]
+
+my_list2=[[1,2,3],[4,5,6],[7,8,9]]
+
+import numpy as np
+
+np.array(my_list)
+
+a=np.array(my_list2)
+a
+
+np.arange(1,10)
+
+print(a,a.ndim)
+
+my_list3=[[[1,2,3],[4,5,6],[7,8,9]]]
+b=np.array(my_list3)
+print(b,b.ndim)
+
+st=np.arange(0,10,3)   # it shows us 0 to 10 but who divided by 3
+st
+
+c=np.zeros((4,5))
+c
+
+d=np.ones((4,6))
+d
+
+e=np.empty(2)
+e
+
+# Diagnol
+
+s=np.eye(4,4)
+s
+
+l=np.linspace(1,4,10)   # Linspace 1 to 4 divided in 10 parts
+l
+
+# Random
+
+r=np.random.rand(2,4)   # rand() give random result between 0 to 1
+r
+
+r2=np.random.randn(2,4)    # randn() random result between 0 to 1, it can be positive or negative 
+r2
+
+r3=np.random.ranf(24)  # ranf() random result in float no.
+r3
+
+r4=np.random.randint(0,100)
+r4
+
+r5=np.random.randint(4,20,5)  # randint() shows us b/w 4 to 20 (5 elements)
+r5
+
+r5.dtype
+
+# Reshape array
+
+a.reshape(3,3)
+
+re=np.array([[1,8,9,5],[4,6,10,9]])
+print(re)
+re.ndim
+
+re.reshape(4,2)
+
+a.max()
+
+a.min()
+
+a.argmax()
+
+a.argmin()
+
+# Arithmetic
+
+ar=np.array([1,2,3,4])
+ar
+
+ar+3    # It show next 3 attributes
+
+ar-3
+
+ar*3
+
+ar/2
+
+# 2D Array
+
+import numpy as np
+
+ks=np.array([[10,15,20,25],[5,10,15,20]])
+print(ks,ks.ndim)
+
+# concatenate(merge)
+ks2=np.array([[2,4,6,8],[3,6,9,12]])
+print(ks+ks2)
+
+print(np.add(ks,ks2))
+
+print(ks-ks2)
+
+np.max(ks)
+
+np.min(ks)
+
+np.argmax(ks)   # Maximum value's index no.
+
+np.argmin(ks)  # Minimum value's index no.
+
+np.max(ks,axis=0)   # Find max attributs column wise
+
+np.max(ks,axis=1)  # Find max attributs row wise
+
+np.sqrt(ks)
+
+ks**2
+
+np.sin(ks)
+
+np.cos(ks)
+
+# Indexing
+
+ind=np.array([2,5,8,3,6,9])
+ind[2]
+
+ind2=np.array([[10,15,20,25],[5,10,15,20]])  # For 2D
+ind2[1,3]
+
+ind3=np.array([[[22,24,26,28],[18,21,24,27],[21,28,35,42]]])  # For 3D
+ind3[0,1,1]
+
+# Slicing
+
+ind[2:5]
+
+ind[:4]
+
+ind[::2]
+
+ind[2::]
+
+# Iterating
+
+j=np.array([45,55,65,75,85,95])
+j
+
+for k in j:
+    print(k)
+
+k=np.array([[20,25,30,35],[60,65,70,75]])
+k
+
+for l in k:
+    for m in l:
+        print(m)
+
+l=np.array([[[4,8,12,16],[3,6,9,12],[2,4,6,8]]])
+l
+
+for n in l:
+    for o in n:
+        for p in o:
+            print(p)
+
+# Join
+
+ar=np.array([5,10,15,20])
+ar2=np.array([25,30,335,40])
+print(ar)
+print(ar2)
+
+arr=np.concatenate((ar,ar2))
+arr
+
+np.stack((ar,ar2))   # By default merge vertically
+
+np.vstack((ar,ar2))
+
+np.hstack((ar,ar2)) 
+
+np.dstack((ar,ar2))   # Height
+
+# Split
+
+ae=np.array([2,4,6,8,10])
+np.array_split(ae,5)
+
+np.array_split(ae,3)
+
+# Search
+
+ac=np.array([10,15,20,25,30,35,40])
+ac
+
+np.where(ac==25)
+
+np.where(ac%10==0)
+
+np.where(ac+5==25)
+
+np.where(ac-5==15)
+
+# Sort
+
+kd=np.array([5,3,4,2,1])
+np.searchsorted(kd,[4],side='left')
+
+np.searchsorted(kd,[4],side='right')
+
+kk=np.array([[12,14,16,18],[55,45,65,25]])
+kk
+
+np.sort(kk)
+
+ ll=np.array([5,8,2,1,6,2,8])
+np.sort(ll)
+
